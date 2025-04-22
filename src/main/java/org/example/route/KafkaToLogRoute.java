@@ -43,16 +43,27 @@ public class KafkaToLogRoute extends RouteBuilder {
         jsonDataFormat.setPrettyPrint(false);
 
         try {
-            from("kafka:my-topic10-response?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
+            from("kafka:my-topic10?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
                 .routeId("kafka-jslt-log")
                 .process(exchange -> {
-                    // Obtener correlationId del mensaje original
-                    String rawBody = exchange.getIn().getBody(String.class);
-                    // Guardar el correlationId en el mensaje
+                    String rawBody = exchange.getMessage().getBody(String.class);
                     System.out.println("Mensaje original desde Kafka (procesador): " + rawBody);
                 })
+                .log("JSON de entrada: ${body}")
+                .setHeader("Content-Type", constant("application/vnd.kafka.json.v2+json"))
+                .setHeader("Accept", constant("application/json"))
+                .setHeader("user_key", constant("c42e2d875cc2712506851a7cc228c133"))
+                .to("https://prdct-transact-env0-test-3scale-apicast-staging.apps.os-nonprod.domcoin.net/CreateLoan?httpMethod=POST&sslContextParameters=#sslContextParameters&throwExceptionOnFailure=false")
 
-                .to("jslt:classpath:jsonResponse.jslt")
+                .log("Código de respuesta: ${header.CamelHttpResponseCode}")
+                .choice()
+                    .when(header("CamelHttpResponseCode").isLessThan(400))
+                        .log("Respuesta exitosa de la API: ${body}")
+                    .otherwise()
+                        .log(LoggingLevel.ERROR, "Error HTTP ${header.CamelHttpResponseCode}: ${body}")
+                .end()
+                //Esto
+                .to("kafka:my-topic10-response?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
                 .log("Respuesta de la api: ${body}");
                 
             } catch(Exception e) {
