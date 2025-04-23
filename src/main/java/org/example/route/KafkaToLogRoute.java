@@ -45,16 +45,12 @@ public class KafkaToLogRoute extends RouteBuilder {
         try {
             from("kafka:my-topic10?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
                 .routeId("kafka-jslt-log")
-                .process(exchange -> {
-                    String rawBody = exchange.getMessage().getBody(String.class);
-                    System.out.println("Mensaje original desde Kafka (procesador): " + rawBody);
-                })
                 .log("JSON de entrada: ${body}")
-                .setHeader("Content-Type", constant("application/vnd.kafka.json.v2+json"))
-                .setHeader("Accept", constant("application/json"))
-                .setHeader("user_key", constant("c42e2d875cc2712506851a7cc228c133"))
+//                .setHeader("Content-Type", constant("application/vnd.kafka.json.v2+json"))
+//                .setHeader("Accept", constant("application/json"))
+//                .setHeader("user_key", constant("c42e2d875cc2712506851a7cc228c133"))
                 .to("https://prdct-transact-env0-test-3scale-apicast-staging.apps.os-nonprod.domcoin.net/CreateLoan?httpMethod=POST&sslContextParameters=#sslContextParameters&throwExceptionOnFailure=false")
-
+                .doTry()
                 .log("Código de respuesta: ${header.CamelHttpResponseCode}")
                 .choice()
                     .when(header("CamelHttpResponseCode").isLessThan(400))
@@ -62,8 +58,13 @@ public class KafkaToLogRoute extends RouteBuilder {
                     .otherwise()
                         .log(LoggingLevel.ERROR, "Error HTTP ${header.CamelHttpResponseCode}: ${body}")
                 .end()
+                .doCatch(Exception.class)
+                .log("Error ${exception.message}")
                 //  JSLT transformation
+                .doTry()
                 .to("jslt:json.jslt")
+                .doCatch(Exception.class)
+                .log("Error ${exception.message}")
                 //enviar la respuesta a kafka
                 .to("kafka:my-topic10-response?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
                 //ver en logs
