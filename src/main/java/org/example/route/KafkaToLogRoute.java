@@ -58,7 +58,7 @@ public class KafkaToLogRoute extends RouteBuilder {
                         .log(LoggingLevel.ERROR, "Error HTTP ${header.CamelHttpResponseCode}: ${body}")
                 .end()
                 .doTry()
-                    .to("jslt:json.jslt")
+                    .to("jslt:jsonResponse.jslt")
                 .doCatch(Exception.class)
                 .process(exchange -> {
                         Exception exception = exchange.getProperty(Exception.class.getName(), Exception.class);
