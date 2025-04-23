@@ -3,9 +3,7 @@ package org.example.route;
 import org.apache.camel.builder.RouteBuilder;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.apache.camel.LoggingLevel;
-import org.apache.camel.model.dataformat.JsonDataFormat;
 import org.apache.camel.component.jackson.JacksonDataFormat;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.net.ssl.X509TrustManager;
 import java.security.cert.X509Certificate;
@@ -14,9 +12,7 @@ import org.apache.camel.support.jsse.TrustManagersParameters;
 import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Named;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+
 
 @ApplicationScoped
 public class KafkaToLogRoute extends RouteBuilder {
@@ -39,8 +35,10 @@ public class KafkaToLogRoute extends RouteBuilder {
 
     @Override
     public void configure() {
+        @SuppressWarnings("resource")
         JacksonDataFormat jsonDataFormat = new JacksonDataFormat();
         jsonDataFormat.setPrettyPrint(false);
+
 
         try {
             from("kafka:my-topic10?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
@@ -58,12 +56,14 @@ public class KafkaToLogRoute extends RouteBuilder {
                     .otherwise()
                         .log(LoggingLevel.ERROR, "Error HTTP ${header.CamelHttpResponseCode}: ${body}")
                 .end()
-                .doCatch(Exception.class)
-                .log("Error ${exception.message}")
-                //  JSLT transformation
                 .doTry()
-                .to("jslt:json.jslt")
+                    .to("jslt:json.jslt")
                 .doCatch(Exception.class)
+                .process(exchange -> {
+                        Exception exception = exchange.getProperty(Exception.class.getName(), Exception.class);
+                        exchange.getMessage().setBody("Error: " + (exception != null ? exception.getMessage() : "Unknown"));
+                    })
+                .end()
                 .log("Error ${exception.message}")
                 //enviar la respuesta a kafka
                 .to("kafka:my-topic10-response?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
