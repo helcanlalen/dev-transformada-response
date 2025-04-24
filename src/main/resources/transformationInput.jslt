@@ -21,13 +21,13 @@
 
       "properties": [
         {
-          "propertyId": "ACCOUNT",
+          "propertyId": "ACCOUNTS",
           "fields":
            [
                         
             {
               "fieldName": "L.TI.GARAN",
-              "fieldValue": .body.properties[0].ACCOUNT."L.TI.GARAN"
+              "fieldValue": .body.properties[0].ACCOUNT."L.TI.GARANT"
             },
             {
               "fieldName": "L.DET.GARANTIA",
