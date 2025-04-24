@@ -27,76 +27,295 @@
     "properties":[
         {
             "ACCOUNT":{
-                  "L.TI.GARAN":"30",
-                  "L.DET.GARANTIA":"STRING",
-                  "CASO.CREATIO":"STRING",
-                  "N.RESOLUCION":"STRING",
-                  "Fecha.Form":"STRING",
-                  "Tipo.Docto.Form":"STRING",
-                  "No.Escritura":"STRING",
-                  "NOTARIO":"STRING",
-                  "Cupo.Inter":"STRING",
-                "Grupo.Planillas":"STRING",
-                  "Gru.Caja.Ahorro":"STRING",
-                  "Origen.Fondos":"STRING",
-                  "Municip.Fondos":"STRING",
-                  "Ent.Q.Autorizo":"STRING",
-        "Fech.Acta.Aprob":"STRING",
-                  "EJE.APROBO":"STRING",
-                  "Codigo.de.Banca":"STRING",
-                  "L.SEGMENTO":"STRING",
-                  "SUBSEGMENTO":"STRING",
-                  "Crit.Valuacion":"STRING",
-                  "Proyect.Nuevos":"STRING",
-                  "Act.Con.Pr.Nuev":"STRING",
-                  "Func.Sindicados":"STRING",					 
-                  "MEDIO.AMORT":"STRING",
-                  "ORIGEN":"STRING",
-                  "COMPLEMENTO":"STRING",
-                  "CARAC.REESTRUC":"STRING",
-                  "COD.PAG.DEUDA":"STRING",
-                  "TIPO.PRESTAMO":"STRING",
-                  "Consumo.Viviend":"STRING",
-                  "Act.Economica":"STRING",
-                  "COD.DESTINO":"STRING",
-                  "Tipo.de.Gasto":"STRING",
-                  "Codigo.CGE":"STRING",
-                  "Tamano.Empresa":"STRING",
-                  "DEU.MAYORES":"STRING",
-                  "SECTORIZACION":"STRING",
-                  "SOLICIT.ACTIVO":"STRING",
-                  "COD.ASEGURADORA":"STRING",
-                  "No.Poliza":"STRING",
-                  "Endoso.Seguro":"STRING",
-                  "No.Certificado":"STRING",
-                  "Valor.Poliza":"STRING",
-                  "Cob.a.Favor":"STRING",
-                  "Prima.Anual":"STRING",
-                  "Valor.Hipoteca":"STRING",
-                  "Fecha.Emision":"STRING",
-                  "Fecha.Vencim":"STRING",
-                  "L.TI.ACT.CRED":"STRING",
-                  "L.ESTADOS":"STRING",
-                  "TIPO.CEDULA":"STRING",
-                  "SIT.ACT.CREDIT":"STRING",
-                  "CONSTRUCTOR":"STRING",
-                  "PROYECTO":"STRING",
-                  "MATRI.FISCAL":"STRING",
-                  "TIPO.INVERSION":"STRING",
-                  "PAIS.AP.FONDOS":"STRING",
-                  "ORIG.CED.HIPO":"STRING",
-                  "N.INST.REAL.OPE":"STRING",
-                  "N.INST.ADQ.CE.H":"STRING",
-                  "FEC.VENC.REPO":"STRING",
-                  "AREA.COBRO":"STRING",
-                  "GEST.COBRO":"STRING",
-                  "NUM.CONT.REPO":"STRING",
-                  "FECHA.VIGENCIA":"STRING",
-                  "TIPO.CANAL":"STRING",
-                  "FEC.EMI.CONT":"STRING",
-                  "AGRUPACION":"STRING",
-                  "Reg.Propiedad":"STRING",
-                  "NUM.ACTA":"STRING"
+                                    {
+              "fieldName": "L.TI.GARAN",
+              "fieldValue": .body.properties[0].ACCOUNT."L.TI.GARAN"
+            },
+            {
+              "fieldName": "L.DET.GARANTIA",
+              "fieldValue": .body.properties[0].ACCOUNT."L.DET.GARANTIA"
+            },
+            {
+              "fieldName": "CASO.CREATIO",
+              "fieldValue": .body.properties[0].ACCOUNT."CASO.CREATIO"
+            },
+            {
+              "fieldName": "N.RESOLUCION",
+              "fieldValue": .body.properties[0].ACCOUNT."N.RESOLUCION"
+            },
+            {
+              "fieldName": "Fecha.Form",
+              "fieldValue": .body.properties[0].ACCOUNT."Fecha.Form"
+            },
+            {
+              "fieldName": "Tipo.Docto.Form",
+              "fieldValue": .body.properties[0].ACCOUNT."Tipo.Docto.Form"
+            },
+            {
+              "fieldName": "No.Escritura",
+              "fieldValue": .body.properties[0].ACCOUNT."No.Escritura"
+            },
+            {
+              "fieldName": "NOTARIO",
+              "fieldValue": .body.properties[0].ACCOUNT."NOTARIO"
+            },
+            {
+              "fieldName": "Cupo.Inter",
+              "fieldValue": .body.properties[0].ACCOUNT."Cupo.Inter"
+            },
+            {
+              "fieldName": "Grupo.Planillas",
+              "fieldValue": .body.properties[0].ACCOUNT."Grupo.Planillas"
+            },
+            {
+              "fieldName": "Gru.Caja.Ahorro",
+              "fieldValue": .body.properties[0].ACCOUNT."Gru.Caja.Ahorro"
+            },
+            {
+              "fieldName": "Origen.Fondos",
+              "fieldValue": .body.properties[0].ACCOUNT."Origen.Fondos"
+            },
+            {
+              "fieldName": "Municip.Fondos",
+              "fieldValue": .body.properties[0].ACCOUNT."Municip.Fondos"
+            },
+            {
+              "fieldName": "Ent.Q.Autorizo",
+              "fieldValue": .body.properties[0].ACCOUNT."Ent.Q.Autorizo"
+            },
+            {
+              "fieldName": "Fech.Acta.Aprob",
+              "fieldValue": .body.properties[0].ACCOUNT."Fech.Acta.Aprob"
+            },
+            {
+              "fieldName": "Fech.Acta.Aprob",
+              "fieldValue": .body.properties[0].ACCOUNT."Fech.Acta.Aprob"
+            },
+            {
+              "fieldName": "EJE.APROBO",
+              "fieldValue": .body.properties[0].ACCOUNT."EJE.APROBO"
+            },
+            {
+              "fieldName": "Codigo.de.Banca",
+              "fieldValue": .body.properties[0].ACCOUNT."Codigo.de.Banca"
+            },
+            {
+              "fieldName": "L.SEGMENTO",
+              "fieldValue": .body.properties[0].ACCOUNT."L.SEGMENTO"
+            },
+            {
+              "fieldName": "SUBSEGMENTO",
+              "fieldValue": .body.properties[0].ACCOUNT."SUBSEGMENTO"
+            },
+            {
+              "fieldName": "Crit.Valuacion",
+              "fieldValue": .body.properties[0].ACCOUNT."Crit.Valuacion"
+            },
+            {
+              "fieldName": "Proyect.Nuevos",
+              "fieldValue": .body.properties[0].ACCOUNT."Proyect.Nuevos"
+            },
+            {
+              "fieldName": "Act.Con.Pr.Nuev",
+              "fieldValue": .body.properties[0].ACCOUNT."Act.Con.Pr.Nuev"
+            },
+            {
+              "fieldName": "Func.Sindicados",
+              "fieldValue": .body.properties[0].ACCOUNT."Func.Sindicados"
+            },
+            {
+              "fieldName": "MEDIO.AMORT",
+              "fieldValue": .body.properties[0].ACCOUNT."MEDIO.AMORT"
+            },
+            {
+              "fieldName": "ORIGEN",
+              "fieldValue": .body.properties[0].ACCOUNT."ORIGEN"
+            },
+            {
+              "fieldName": "COMPLEMENTO",
+              "fieldValue": .body.properties[0].ACCOUNT."COMPLEMENTO"
+            },
+            {
+              "fieldName": "CARAC.REESTRUC",
+              "fieldValue": .body.properties[0].ACCOUNT."CARAC.REESTRUC"
+            },
+            {
+              "fieldName": "COD.PAG.DEUDA",
+              "fieldValue": .body.properties[0].ACCOUNT."COD.PAG.DEUDA"
+            },
+            {
+              "fieldName": "TIPO.PRESTAMO",
+              "fieldValue": .body.properties[0].ACCOUNT."TIPO.PRESTAMO"
+            },
+            {
+              "fieldName": "Consumo.Viviend",
+              "fieldValue": .body.properties[0].ACCOUNT."Consumo.Viviend"
+            },
+            {
+              "fieldName": "Act.Economica",
+              "fieldValue": .body.properties[0].ACCOUNT."Act.Economica"
+            },
+            {
+              "fieldName": "COD.DESTINO",
+              "fieldValue": .body.properties[0].ACCOUNT."COD.DESTINO"
+            },
+            {
+              "fieldName": "Tipo.de.Gasto",
+              "fieldValue": .body.properties[0].ACCOUNT."Tipo.de.Gasto"
+            },
+            {
+              "fieldName": "Codigo.CGE",
+              "fieldValue": .body.properties[0].ACCOUNT."Codigo.CGE"
+            },
+            {
+              "fieldName": "Tamano.Empresa",
+              "fieldValue": .body.properties[0].ACCOUNT."Tamano.Empresa"
+            },
+            {
+              "fieldName": "DEU.MAYORES",
+              "fieldValue": .body.properties[0].ACCOUNT."DEU.MAYORES"
+            },
+            {
+              "fieldName": "SECTORIZACION",
+              "fieldValue": .body.properties[0].ACCOUNT."SECTORIZACION"
+            },
+            {
+              "fieldName": "SOLICIT.ACTIVO",
+              "fieldValue": .body.properties[0].ACCOUNT."SOLICIT.ACTIVO"
+            },
+            {
+              "fieldName": "COD.ASEGURADORA",
+              "fieldValue": .body.properties[0].ACCOUNT."COD.ASEGURADORA"
+            },
+            {
+              "fieldName": "No.Poliza",
+              "fieldValue": .body.properties[0].ACCOUNT."No.Poliza"
+            },
+            {
+              "fieldName": "Endoso.Seguro",
+              "fieldValue": .body.properties[0].ACCOUNT."Endoso.Seguro"
+            },
+            {
+              "fieldName": "No.Certificado",
+              "fieldValue": .body.properties[0].ACCOUNT."No.Certificado"
+            },
+            {
+              "fieldName": "Valor.Poliza",
+              "fieldValue": .body.properties[0].ACCOUNT."Valor.Poliza"
+            },
+            {
+              "fieldName": "Cob.a.Favor",
+              "fieldValue": .body.properties[0].ACCOUNT."Cob.a.Favor"
+            },
+            {
+              "fieldName": "Prima.Anual",
+              "fieldValue": .body.properties[0].ACCOUNT."Prima.Anual"
+            },
+            {
+              "fieldName": "Valor.Hipoteca",
+              "fieldValue": .body.properties[0].ACCOUNT."Valor.Hipoteca"
+            },
+            {
+              "fieldName": "Fecha.Emision",
+              "fieldValue": .body.properties[0].ACCOUNT."Fecha.Emision"
+            },
+            {
+              "fieldName": "Fecha.Vencim",
+              "fieldValue": .body.properties[0].ACCOUNT."Fecha.Vencim"
+            },
+            {
+              "fieldName": "L.TI.ACT.CRED",
+              "fieldValue": .body.properties[0].ACCOUNT."L.TI.ACT.CRED"
+            },
+            {
+              "fieldName": "L.ESTADOS",
+              "fieldValue": .body.properties[0].ACCOUNT."L.ESTADOS"
+            },
+            {
+              "fieldName": "TIPO.CEDULA",
+              "fieldValue": .body.properties[0].ACCOUNT."TIPO.CEDULA"
+            },
+            {
+              "fieldName": "CONSTRUCTOR",
+              "fieldValue": .body.properties[0].ACCOUNT."CONSTRUCTOR"
+            },
+            {
+              "fieldName": "PROYECTO",
+              "fieldValue": .body.properties[0].ACCOUNT."PROYECTO"
+            },
+            {
+              "fieldName": "MATRI.FISCAL",
+              "fieldValue": .body.properties[0].ACCOUNT."MATRI.FISCAL"
+            },
+            {
+              "fieldName": "TIPO.INVERSION",
+              "fieldValue": .body.properties[0].ACCOUNT."TIPO.INVERSION"
+            },
+            {
+              "fieldName": "INVERSION",
+              "fieldValue": .body.properties[0].ACCOUNT."INVERSION"
+            },
+            {
+              "fieldName": "PAIS.AP.FONDOS",
+              "fieldValue": .body.properties[0].ACCOUNT."PAIS.AP.FONDOS"
+            },
+            {
+              "fieldName": "ORIG.CED.HIPO",
+              "fieldValue": .body.properties[0].ACCOUNT."ORIG.CED.HIPO"
+            },
+            {
+              "fieldName": "N.INST.REAL.OPE",
+              "fieldValue": .body.properties[0].ACCOUNT."N.INST.REAL.OPE"
+            },
+            {
+              "fieldName": "N.INST.ADQ.CE.H",
+              "fieldValue": .body.properties[0].ACCOUNT."N.INST.ADQ.CE.H"
+            },
+            {
+              "fieldName": "Fecha.Vencim",
+              "fieldValue": .body.properties[0].ACCOUNT."Fecha.Vencim"
+            },
+            {
+              "fieldName": "FEC.VENC.REPO",
+              "fieldValue": .body.properties[0].ACCOUNT."FEC.VENC.REPO"
+            },
+            {
+              "fieldName": "AREA.COBRO",
+              "fieldValue": .body.properties[0].ACCOUNT."AREA.COBRO"
+            },
+            {
+              "fieldName": "GEST.COBRO",
+              "fieldValue": .body.properties[0].ACCOUNT."GEST.COBRO"
+            },
+            {
+              "fieldName": "NUM.CONT.REPO",
+              "fieldValue": .body.properties[0].ACCOUNT."NUM.CONT.REPO"
+            },
+            {
+              "fieldName": "FECHA.VIGENCIA",
+              "fieldValue": .body.properties[0].ACCOUNT."FECHA.VIGENCIA"
+            },
+            {
+              "fieldName": "TIPO.CANAL",
+              "fieldValue": .body.properties[0].ACCOUNT."TIPO.CANAL"
+            },
+            {
+              "fieldName": "FEC.EMI.CONT",
+              "fieldValue": .body.properties[0].ACCOUNT."FEC.EMI.CONT"
+            },
+            {
+              "fieldName": "AGRUPACION",
+              "fieldValue": .body.properties[0].ACCOUNT."AGRUPACION"
+            },
+            {
+              "fieldName": "Reg.Propiedad",
+              "fieldValue": .body.properties[0].ACCOUNT."Reg.Propiedad"
+            },
+            {
+              "fieldName": "NUM.ACTA",
+              "fieldValue": .body.properties[0].ACCOUNT."NUM.ACTA"
+            }       
+        
           }
         },
         {
