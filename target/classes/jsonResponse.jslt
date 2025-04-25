@@ -1,1 +1,12 @@
-{*:.}
+{
+"header":.header,
+"body":{
+        "Channel": .body."User",
+        "UUID": .body."UUID",
+        "Terminal": .body."Terminal",
+        "properties":{
+            "commitment":.body.properties.commitment,
+            "schedule":.body.properties.amount                
+        }
+}
+}
