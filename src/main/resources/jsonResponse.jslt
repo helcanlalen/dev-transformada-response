@@ -4,6 +4,7 @@
         "Channel": .body."User",
         "UUID": .body."UUID",
         "Terminal": .body."Terminal",
+        "User": .body."User",
         "properties":{
             "commitment":.body.properties.commitment,
             "schedule":.body.properties.amount                
