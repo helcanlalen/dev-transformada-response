@@ -6,6 +6,7 @@
         "Terminal": .body."Terminal",
         "User": .body."User",
         "properties":{
+            "L.TI.GARAN":.body.arrangementActivity.properties[0].fields[0]."fieldValue",
             "commitment":.body.properties.commitment,
             "schedule":.body.properties.schedule                
         }
