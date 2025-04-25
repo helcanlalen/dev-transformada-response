@@ -1,7 +1,7 @@
 {
 "header":.header,
 "body":{
-        "Channel": .body."User",
+        "Channel": .body."Channel",
         "UUID": .body."UUID",
         "Terminal": .body."Terminal",
         "User": .body."User",
