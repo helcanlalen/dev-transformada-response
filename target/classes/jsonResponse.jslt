@@ -1,10 +1,12 @@
 {
 "header":.header,
+"error":.error,
 "body":{
         "Channel": .body."Channel",
         "UUID": .body."UUID",
         "Terminal": .body."Terminal",
         "User": .body."User",
+        "commitment":.body.properties.commitment,
         "properties":{
             "L.TI.GARAN":.body.arrangementActivity.properties[0].fields[0]."fieldValue",
             "L.DET.GARANTIA":.body.arrangementActivity.properties[0].fields[1]."fieldValue",
