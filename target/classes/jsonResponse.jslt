@@ -75,7 +75,7 @@
             "L.NUM.CONT.REPO":.body.arrangementActivity.properties[0].fields[64]."fieldValue",
             "L.FECHA.VIGENCI":.body.arrangementActivity.properties[0].fields[65]."fieldValue",
             "L.TIPO.CANAL":.body.arrangementActivity.properties[0].fields[66]."fieldValue",
-            "L.NUM.CONT.REPO":.body.arrangementActivity.properties[0].fields[67]."fieldValue",
+            "L.FEC.EMI.CONT":.body.arrangementActivity.properties[0].fields[67]."fieldValue",
             "L.AGRUPACION":.body.arrangementActivity.properties[0].fields[68]."fieldValue",
             "Reg.Propiedad":.body.arrangementActivity.properties[0].fields[69]."fieldValue",
             "L.NUM.ACTA":.body.arrangementActivity.properties[0].fields[70]."fieldValue",
