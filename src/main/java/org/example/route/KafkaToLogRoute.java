@@ -44,6 +44,8 @@ public class KafkaToLogRoute extends RouteBuilder {
             from("kafka:my-topic10?brokers=cluster-nonprod01-kafka-bootstrap.amq-streams-kafka:9092")
                 .routeId("kafka-jslt-log")
                 .log("JSON de entrada: ${body}")
+                .log("URL DE LA PETICION: ${header.CamelHttpUrl}")
+                .log("HEADERS: ${headers}")
 //                .setHeader("Content-Type", constant("application/vnd.kafka.json.v2+json"))
                 .setHeader("Accept", constant("application/json"))
 //                .setHeader("user_key", constant("c42e2d875cc2712506851a7cc228c133"))
