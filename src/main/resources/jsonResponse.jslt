@@ -8,9 +8,9 @@
         "User": .body."User",
         "commitment":.body.properties.commitment,
         "amount":.body.properties.commitment.body.Amount,
-        "calcAmount" .body.properties.schedule.body.calcAmount11,
-        "segsalinsolutos" .body.properties.segsalinsolutos.body.fixedAmount,
-        "segdesempleo" .body.properties.segdesempleo.body.fixedAmount,
+        "calcAmount": .body.properties.schedule.body.calcAmount11,
+        "segsalinsolutos": .body.properties.segsalinsolutos.body.fixedAmount,
+        "segdesempleo": .body.properties.segdesempleo.body.fixedAmount,
         "properties":{
             "L.TI.GARAN":.body.arrangementActivity.properties[0].fields[0]."fieldValue",
             "L.DET.GARANTIA":.body.arrangementActivity.properties[0].fields[1]."fieldValue",
@@ -82,10 +82,7 @@
             "L.FEC.EMI.CONT":.body.arrangementActivity.properties[0].fields[67]."fieldValue",
             "L.AGRUPACION":.body.arrangementActivity.properties[0].fields[68]."fieldValue",
             "Reg.Propiedad":.body.arrangementActivity.properties[0].fields[69]."fieldValue",
-            "L.NUM.ACTA":.body.arrangementActivity.properties[0].fields[70]."fieldValue",
-            "commitment":.body.properties.commitment,
-            "schedule":.body.properties.amount             
-
+            "L.NUM.ACTA":.body.arrangementActivity.properties[0].fields[70]."fieldValue"
         }
 }
 }
