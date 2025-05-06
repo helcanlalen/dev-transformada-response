@@ -6,7 +6,6 @@
         "UUID": .body."UUID",
         "Terminal": .body."Terminal",
         "User": .body."User",
-        "commitment":.body.properties.commitment,
         "amount":.body.properties.commitment.body.Amount,
         "calcAmount": .body.properties.schedule.body.calcAmount11,
         "segsalinsolutos": .body.properties.segsalinsolutos.body.fixedAmount,
