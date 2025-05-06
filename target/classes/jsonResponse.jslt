@@ -80,7 +80,9 @@
             "Reg.Propiedad":.body.arrangementActivity.properties[0].fields[69]."fieldValue",
             "L.NUM.ACTA":.body.arrangementActivity.properties[0].fields[70]."fieldValue",
             "commitment":.body.properties.commitment,
-            "schedule":.body.properties.amount                
+            "schedule":.body.properties.amount,
+            "mount":.body.properties.commitment.body.Amount                
+
         }
 }
 }
