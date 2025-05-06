@@ -7,6 +7,7 @@
         "Terminal": .body."Terminal",
         "User": .body."User",
         "commitment":.body.properties.commitment,
+        "monto":.body.properties.commitment,   
         "properties":{
             "L.TI.GARAN":.body.arrangementActivity.properties[0].fields[0]."fieldValue",
             "L.DET.GARANTIA":.body.arrangementActivity.properties[0].fields[1]."fieldValue",
@@ -80,8 +81,7 @@
             "Reg.Propiedad":.body.arrangementActivity.properties[0].fields[69]."fieldValue",
             "L.NUM.ACTA":.body.arrangementActivity.properties[0].fields[70]."fieldValue",
             "commitment":.body.properties.commitment,
-            "schedule":.body.properties.amount,
-            "mount":.body.properties.commitment.body.Amount                
+            "schedule":.body.properties.amount             
 
         }
 }
